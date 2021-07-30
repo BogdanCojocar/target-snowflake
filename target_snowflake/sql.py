@@ -12,7 +12,7 @@ def valid_identifier(x):
     """
     if not x:
         raise SQLError('Identifier must be non empty.')
-    
+
     if not isinstance(x, str):
         raise SQLError('Identifier must be a string. Got {}'.format(type(x)))
 

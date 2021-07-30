@@ -254,8 +254,6 @@ class SnowflakeTarget(SQLInterface):
             self._set_table_metadata(cur, table_name, metadata)
 
     def add_table(self, cur, path, name, metadata):
-        sql.valid_identifier(name)
-
         cur.execute('''
             CREATE TABLE {}.{}.{} ({} {})
             '''.format(
@@ -615,7 +613,7 @@ class SnowflakeTarget(SQLInterface):
 
         if not tables:
             return None
-        
+
         if len(tables) != 1:
             raise SnowflakeError(
                 '{} tables returned while searching for: {}.{}.{}'.format(

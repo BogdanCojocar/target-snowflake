@@ -11,7 +11,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name='target-snowflake',
     url='https://github.com/datamill-co/target-snowflake',
-    author='datamill',
+    author='Forked from datamill',
     version="0.2.4",
     description='Singer.io target for loading data into Snowflake',
     long_description=long_description,
