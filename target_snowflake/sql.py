@@ -22,13 +22,6 @@ def valid_identifier(x):
             len(x),
             x))
 
-    if not re.match(r'^[a-zA-Z_]\w+$', x):
-        raise SQLError(
-            'Identifier must only contain alphanumerics, or underscores, and start with alphas. Got `{}` for `{}`'.format(
-                re.findall(r'[^0-9]', '1234a567')[0],
-                x
-            ))
-
     return True
 
 
